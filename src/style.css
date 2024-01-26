@@ -68,7 +68,7 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 22;
 }
 .main-nav ul {
     list-style: none;
@@ -76,6 +76,7 @@ a:hover {
     transform-origin: 2.2%;
     transform: rotate(-90deg);
     border-bottom: #ffffff37 1px solid;
+    background-color: #171b22;
 }
 .main-nav li {
     border-left: #ffffff37 1px solid;
