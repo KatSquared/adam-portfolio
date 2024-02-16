@@ -10,7 +10,7 @@ homeTitleFade()
 
 window.onscroll = () => {
     y = window.scrollY;
-    colorBackground.style.opacity = 'calc(0 + ' + y/1600 + ')';
+    colorBackground.style.opacity = 'calc(0 + ' + y/2000 + ')';
     homeTitleFade()
 }
 
