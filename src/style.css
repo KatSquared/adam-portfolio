@@ -9,6 +9,8 @@
     --g8: 48.8vw;
     --g9: 78.958vw;
     --g10: 127.754vw;
+
+    --font-main: 'Montserrat', sans-serif;
 }
 
 * {
@@ -37,7 +39,7 @@ body {
 }
 
 h1 {
-    font-size: 7.21rem;
+    font-size: 7.12rem;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
 }
@@ -90,6 +92,7 @@ a:hover {
 .main-nav ul {
     list-style: none;
     display: flex;
+    justify-content: space-between;
     transform-origin: 2.3rem;
     transform: rotate(-90deg);
     border-bottom: #ffffff37 1px solid;
@@ -97,16 +100,15 @@ a:hover {
 }
 .main-nav li {
     border-left: #ffffff37 1px solid;
-    padding: 0 7.21vh;
+    padding: 0 7.12vh;
     height: 4.401rem;
-    width: max-content;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .main-nav li:first-child {
     border: none;
-    padding-left: 7.21rem;
 }
 .main-nav li:hover {
     transition: all 300ms ease-in;
@@ -129,6 +131,15 @@ section.home {
     height: 100vh;
     width: 100vw;
     padding: 11.52vh 0;
+    position: relative;
+}
+
+.home > svg {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 0;
 }
 
 .home > * {
@@ -136,11 +147,44 @@ section.home {
     z-index: 10;
 }
 .home .wrapper {
-    margin-left: var(--g4);
+    margin-left: 7.9rem;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
     position: fixed;
-    height: 81vh;
+    height: calc(100vh - 10.5rem);
+    width: calc(100vw - 7.9rem - 4.401rem);
+}
+.home .wrapper .home-grid{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: max-content 100px max-content;
+    grid-template-areas: 
+        "title1"
+        "line"
+        "title2";
+    justify-items: end;
+    margin-top: -0.618rem;
+}
+.home .wrapper div h4 {
+    width: 300px;
+    text-align: justify;
+    padding: 2.71rem;
+    letter-spacing: 1px;
+    border: #ffffff37 1px solid;
+    line-height: 3.6rem;
+    font-size: 2.71rem;
+    font-weight: 100;
+}
+.home .wrapper div h4#homeTitle1 {
+    grid-area: title1;
+}
+.home .wrapper div h4#homeTitle2{
+    grid-area: title2;
+}
+.home .wrapper svg {
+    grid-area: line;
 }
 
 #canvas, canvas {
@@ -225,7 +269,7 @@ section .text-box p {
     text-align: right;
 }
 .img-container img{
-    width: 7.21rem;
+    width: 7.12rem;
     filter: invert();
 }
 
